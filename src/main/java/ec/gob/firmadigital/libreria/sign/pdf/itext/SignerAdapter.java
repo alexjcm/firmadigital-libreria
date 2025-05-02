@@ -15,7 +15,6 @@
  * You should have received a copy of the GNU Affero General Public License
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
-
 package ec.gob.firmadigital.libreria.sign.pdf.itext;
 
 import java.security.GeneralSecurityException;
@@ -24,11 +23,11 @@ import com.itextpdf.signatures.IExternalSignature;
 
 import ec.gob.firmadigital.libreria.sign.RubricaSigner;
 
-public class ITextSignerAdapter implements IExternalSignature {
+public class SignerAdapter implements IExternalSignature {
 
-    private RubricaSigner signer;
+    private final RubricaSigner signer;
 
-    public ITextSignerAdapter(RubricaSigner signer) {
+    public SignerAdapter(RubricaSigner signer) {
         this.signer = signer;
     }
 

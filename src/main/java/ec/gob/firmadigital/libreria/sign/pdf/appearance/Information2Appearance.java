@@ -15,7 +15,6 @@
  * You should have received a copy of the GNU Affero General Public License
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
-
 package ec.gob.firmadigital.libreria.sign.pdf.appearance;
 
 import java.io.IOException;
@@ -75,6 +74,11 @@ public class Information2Appearance implements CustomAppearance {
         Text contenido = new Text(nombreFirmante.trim());
         paragraph = new Paragraph().add(contenido).setFont(fontHelvetica).setMargin(0).setMultipliedLeading(0.9f)
                 .setFontSize(6.25f);
+        textDiv.add(paragraph);
+        
+        Text info = new Text("\nValidar únicamente con FirmaEC");
+        paragraph = new Paragraph().add(info).setFont(fontHelvetica).setMargin(0).setMultipliedLeading(0.9f)
+                .setFontSize(3.25f);
         textDiv.add(paragraph);
 
         contenido = new Text("Razón: " + reason);

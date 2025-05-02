@@ -17,54 +17,45 @@
  */
 package ec.gob.firmadigital.libreria.utils;
 
-import java.util.logging.Logger;
-
 /**
- * Utilidades varias.
+ * Utilidades SO y Java.
  *
- * @author Ricardo Arguello <ricardo.arguello@soportelibre.com>
+ * @author Ricardo Arguello
  */
 public class OsUtils {
 
-    private static final Logger logger = Logger.getLogger(OsUtils.class.getName());
-
     public static boolean isWindows() {
         String osName = System.getProperty("os.name");
-        logger.finer("Operating System:" + osName);
         return (osName.toUpperCase().indexOf("WINDOWS") == 0);
     }
 
     public static boolean isMac() {
         String osName = System.getProperty("os.name");
-        logger.finer("Operating System:" + osName);
         return osName.toUpperCase().contains("MAC");
     }
 
     public static String getOs() {
         String osName = System.getProperty("os.name");
-        logger.finer("Operating System:" + osName);
         return osName.toUpperCase();
     }
-    
+
     public static String getNameOs(String osName) {
         if (osName.toUpperCase().indexOf("WINDOWS") == 0) {
-            osName= "WINDOWS";
+            osName = "WINDOWS";
         } else if (osName.toUpperCase().contains("MAC")) {
-            osName= "MAC";
+            osName = "MAC";
         } else if (osName.toUpperCase().contains("LINUX")) {
-            osName="LINUX";
+            osName = "LINUX";
         } else if (osName.toUpperCase().contains("ANDROID ")) {
-            osName="ANDROID";
+            osName = "ANDROID";
         } else if (osName.toUpperCase().contains("IOS ")) {
-            osName="IOS";
+            osName = "IOS";
         }
-        logger.finer("Operating System:" + osName);
         return osName;
     }
 
     public static String getJavaVersion() {
         String javaVersion = System.getProperty("java.version");
-        logger.finer("Java Version:" + javaVersion);
         return javaVersion.toUpperCase();
     }
 

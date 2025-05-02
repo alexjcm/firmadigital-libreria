@@ -1,6 +1,6 @@
 /*
- * Copyright (C) 2021 
- * Authors: Ricardo Arguello
+ * Copyright (C) 2025
+ * Author: Freddy Pico
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Affero General Public License as
@@ -15,18 +15,18 @@
  * You should have received a copy of the GNU Affero General Public License
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
+package ec.gob.firmadigital.libreria.certificate.ec.securitydata;
 
-package ec.gob.firmadigital.libreria.sign.pdf;
+import ec.gob.firmadigital.libreria.certificate.ec.CertificadoSelladoTiempo;
+import java.security.cert.X509Certificate;
 
-import java.io.IOException;
-import java.io.InputStream;
-import java.security.cert.Certificate;
-import java.util.Properties;
+/**
+ *
+ * @author Freddy Pico
+ */
+public class CertificadoSelladoTiempoSecurityData extends CertificadoSecurityData implements CertificadoSelladoTiempo {
 
-import ec.gob.firmadigital.libreria.sign.RubricaSigner;
-
-public interface PdfSigner {
-
-    byte[] sign(InputStream data, RubricaSigner signer, Certificate[] certChain, Properties params)
-            throws IOException;
+    public CertificadoSelladoTiempoSecurityData(X509Certificate certificado) {
+        super(certificado);
+    }
 }

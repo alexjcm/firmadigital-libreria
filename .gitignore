@@ -1,7 +1,8 @@
 .classpath
 .project
 .settings
-.idea
+.idea/
 nbactions.xml
 nb-configuration.xml
 target
+src/test

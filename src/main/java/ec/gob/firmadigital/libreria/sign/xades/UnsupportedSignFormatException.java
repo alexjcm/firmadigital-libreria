@@ -15,7 +15,6 @@
  * You should have received a copy of the GNU Affero General Public License
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
-
 package ec.gob.firmadigital.libreria.sign.xades;
 
 import ec.gob.firmadigital.libreria.exceptions.RubricaException;
@@ -25,8 +24,6 @@ import ec.gob.firmadigital.libreria.exceptions.RubricaException;
  * reconocido o se indica un formato de firma no soportado.
  */
 public final class UnsupportedSignFormatException extends RubricaException {
-
-    private static final long serialVersionUID = -1;
 
     /**
      * Crea la excepci&oacute;n con un mensaje determinado.

@@ -23,7 +23,7 @@ import java.security.cert.Certificate;
 /**
  * Objeto para almacenar un PrivateKey y un Certificate chain a la vez.
  *
- * @author Ricardo Arguello <ricardo.arguello@soportelibre.com>
+ * @author Ricardo Arguello
  * @deprecated
  */
 public class PrivateKeyAndCertificateChain {
@@ -50,6 +50,7 @@ public class PrivateKeyAndCertificateChain {
         return certificateChain;
     }
 
+    @Override
     public String toString() {
         return alias;
     }
